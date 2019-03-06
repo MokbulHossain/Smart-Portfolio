@@ -565,8 +565,8 @@ a.article:hover {
 }
 
 .gallery_product img {
-    height: 221px;
-    width: 347px;
+    height: 275px;
+    width: 100%;
 }
 
 .overlay {
