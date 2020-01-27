@@ -148,7 +148,7 @@ function loadSkills1() {
     ctx.beginPath();
     ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
     ctx.stroke();
-    if (al >= 50) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
+    if (al >= 80) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
       clearTimeout(sim);
       // Add scripting here that will run when progress completes
     }
