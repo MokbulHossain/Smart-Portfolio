@@ -101,7 +101,7 @@ var TxtType = function(el, toRotate, period) {
 //skill
 
 //draw the doughnut
-var doughnutArray = [document.getElementById('doughnut20').getContext('2d'),document.getElementById('doughnut').getContext('2d'), document.getElementById('doughnut2').getContext('2d'), document.getElementById('doughnut3').getContext('2d'), document.getElementById('doughnut4').getContext('2d')];
+var doughnutArray = [document.getElementById('doughnut').getContext('2d'), document.getElementById('doughnut2').getContext('2d'), document.getElementById('doughnut3').getContext('2d'), document.getElementById('doughnut4').getContext('2d')];
 for (var i = 0; i < doughnutArray.length; i++) {
   doughnutArray[i].lineWidth = 5; //thickness of the line
   doughnutArray[i].fillStyle = '#eaeaea';
