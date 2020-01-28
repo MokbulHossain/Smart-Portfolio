@@ -566,7 +566,7 @@ function loadSkills15() {
       clearTimeout(sim);
       // Add scripting here that will run when progress completes
     }
-    al++;
+    al++;console.log(al)
   }
   var sim = setInterval(progressSim, 50); //speed
 
