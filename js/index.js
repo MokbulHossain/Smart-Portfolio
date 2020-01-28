@@ -562,11 +562,11 @@ function loadSkills15() {
     ctx.beginPath();
     ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
     ctx.stroke();
-    if (al >= 75) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
+    if (al >= 85) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
       clearTimeout(sim);
       // Add scripting here that will run when progress completes
     }
-    al++;console.log(al)
+    al++;
   }
   var sim = setInterval(progressSim, 50); //speed
 
