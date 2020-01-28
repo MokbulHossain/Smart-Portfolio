@@ -126,6 +126,7 @@ window.onload = function() {
     loadSkills13();
     loadSkills14();
     loadSkills15();
+	loadSkills20();
   }
   /*Load skills one function*/
 function loadSkills1() {
@@ -563,6 +564,36 @@ function loadSkills15() {
     ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
     ctx.stroke();
     if (al >= 51) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
+      clearTimeout(sim);
+      // Add scripting here that will run when progress completes
+    }
+    al++;
+  }
+  var sim = setInterval(progressSim, 50); //speed
+
+}
+
+function loadSkills20() {
+  var ctx = document.getElementById('skill20').getContext('2d');
+  var al = 0;
+  var start = 4.72;
+  var cw = ctx.canvas.width;
+  var ch = ctx.canvas.height;
+  var diff;
+
+  function progressSim() {
+    diff = ((al / 100) * Math.PI * 2 * 10).toFixed(2); //change the arc by multiplying .. * Math.PI*2* --> 7.5=75, 5=50 etc.
+    ctx.clearRect(0, 0, cw, ch);
+    ctx.lineWidth = 5; //thickness of the line
+    ctx.fillStyle = '#FDC724';
+    ctx.strokeStyle = "#FDC724";
+    ctx.textAlign = 'center';
+    ctx.font = "30px Radley";
+    ctx.fillText(al + '%', cw * .5 + 2, ch * .5 + 8, cw);
+    ctx.beginPath();
+    ctx.arc(60, 60, 55, start, diff / 10 + start, false); //.arc(x, y , radius, startAngle, endAngle, anticlockwise)
+    ctx.stroke();
+    if (al >= 50) { // stop the recreation at your desired point, i.e change 100 to 75 if you need just 75%.
       clearTimeout(sim);
       // Add scripting here that will run when progress completes
     }
